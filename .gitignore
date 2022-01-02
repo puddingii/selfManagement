@@ -1,0 +1,6 @@
+.nuxt
+node_modules
+.env
+dist
+yarn.lock
+.DS_Store
