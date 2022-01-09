@@ -131,8 +131,8 @@ export default {
       default: false
     },
     inputValue: {
-      type: any,
-      default: undefined
+      type: String,
+      default: ''
     },
     large: {
       type: Boolean,
@@ -239,8 +239,8 @@ export default {
       default: 'button'
     },
     value: {
-      type: any,
-      default: undefined
+      type: String,
+      default: ''
     },
     width: {
       type: [Number, String],
@@ -257,7 +257,7 @@ export default {
   },
   methods: {
     onButton(event) {
-      this.$emit('onButton', event);
+      this.$emit('click', event);
     }
   }
 }

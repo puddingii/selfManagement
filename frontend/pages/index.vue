@@ -1,17 +1,23 @@
 <template>
-  <div>HI</div>
+  <div>
+    <TTopNavigation :page-title="pageTitle" />
+    <Todo />
+  </div>
 </template>
 
 <script>
-export default {
-  layout: 'LeftNavigation',
-  asyncData () {
+import TTopNavigation from '~/components/templates/TTopNavigation.vue';
+import Todo from '~/components/todo/Todo.vue';
 
+export default {
+  components: {
+    TTopNavigation,
+    Todo
   },
-  
+  layout: 'LeftNavigation',
   data () {
     return {
-
+      pageTitle: 'Home'
     }
   },
 }

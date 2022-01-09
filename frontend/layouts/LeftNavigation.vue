@@ -1,18 +1,22 @@
 <template>
-  <v-container>
-    <TNavigation />
-    <Nuxt />
-  </v-container>
+  <v-app id="inspire">
+    <TLeftNavigation />
+
+    <v-main>
+      <Nuxt />
+    </v-main>
+  </v-app>
 </template>
 
 <script>
-import TNavigation from '~/components/templates/TNavigation.vue';
+import TLeftNavigation from '~/components/templates/TLeftNavigation.vue';
 
 export default {
   name: 'LeftNavigation',
   components: {
-    TNavigation
-  }
+    TLeftNavigation,
+  },
+  
 }
 </script>
 

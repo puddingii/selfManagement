@@ -1,8 +1,9 @@
 <template>
   <v-navigation-drawer
     permanent
-    expand-on-hover
+    mini-variant
     app
+    color="grey lighten-1"
   >
     <OVerticalNavigation :navi-item-list="naviItemList" />
   </v-navigation-drawer>
@@ -19,6 +20,10 @@ export default {
   data() {
     return {
       naviItemList: [
+        {
+          icon: 'mdi-home',
+          text: 'Home'
+        },
         {
           icon: 'mdi-folder',
           text: 'Folder'
