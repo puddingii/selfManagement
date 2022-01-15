@@ -1,6 +1,6 @@
 <template>
   <div>
-    YearTodo
+    <v-alert class="todoTitle" text dense color="purple">YearTodo</v-alert>
   </div>
 </template>
 
@@ -11,5 +11,7 @@ export default {
 </script>
 
 <style>
-
+.todoTitle{
+  text-align: center;
+}
 </style>

@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <v-card class="overflow-hidden">
     <TTopNavigation :page-title="pageTitle" />
     <Todo />
-  </div>
+  </v-card>
 </template>
 
 <script>

@@ -1,6 +1,7 @@
 <template>
   <v-app-bar
     color="grey lighten-5"
+    class=""
   >
     <v-toolbar-title>{{ pageTitle }}</v-toolbar-title>
 
@@ -11,39 +12,18 @@
       {{ btnInfo.text }}
     </AButton>
 
-    <v-menu
-      left
-      bottom
-    >
-      <template #activator="{ on, attrs }">
-        <v-btn
-          icon
-          v-bind="attrs"
-          v-on="on"
-        >
-          <v-icon>mdi-dots-vertical</v-icon>
-        </v-btn>
-      </template>
-
-      <v-list>
-        <v-list-item
-          v-for="(itemInfo, i) in dropdownItemGroup"
-          :key="i"
-          @click="itemInfo.onBtn"
-        >
-          <v-list-item-title>{{ itemInfo.text }}</v-list-item-title>
-        </v-list-item>
-      </v-list>
-    </v-menu>
+    <MDotMenu :item-group="dropdownItemGroup" />
   </v-app-bar>
 </template>
 
 <script>
-import AButton from "~/components/atoms/button/AButton.vue";
+import AButton from '~/components/atoms/button/AButton.vue';
+import MDotMenu from '~/components/molecules/list/MDotMenu.vue';
 
 export default {
   components: {
-    AButton
+    AButton,
+    MDotMenu,
   },
   props: {
     pageTitle: {
@@ -87,6 +67,8 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+.mainBar {
+  margin-left: 56px;
+}
 </style>

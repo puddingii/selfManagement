@@ -1,9 +1,26 @@
 <template>
-  <div class="d-flex justify-space-around mb-6">
-    <DayTodo />
-    <MonthTodo />
-    <YearTodo />
-  </div>
+  <v-container class="grey lighten-5">
+    <v-row no-gutters class="todoContent">
+      <v-col
+        cols="12"
+        sm="4"
+      >
+        <YearTodo />
+      </v-col>
+      <v-col
+        cols="12"
+        sm="4"
+      >
+        <MonthTodo />
+      </v-col>
+      <v-col
+        cols="12"
+        sm="4"
+      >
+        <DayTodo />
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script>
@@ -21,6 +38,11 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+.todoArea {
+  margin-top: 10px;
+}
+.todoContent {
+  min-height: 100vh;
+}
 </style>

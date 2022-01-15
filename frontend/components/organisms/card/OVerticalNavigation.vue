@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import MListItem from '~/components/molecules/List/MListItem.vue';
+import MListItem from '~/components/molecules/list/MListItem.vue';
 
 export default {
   name: 'OVerticalNavigation',
